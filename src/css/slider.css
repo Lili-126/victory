@@ -1,0 +1,70 @@
+.slider-box {
+  background-position: center top;
+  background-size: cover;
+  position: absolute;
+  width: 25%;
+  height: 35%;
+  bottom: 70px;
+  right: 90px;
+  border-radius: 7px;
+  box-shadow:  var(--boxShadow);
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.slide {
+  display: none;
+}
+
+.arrow {
+  position: fixed;
+  background: transparent;
+  border: none;
+  border-radius: 15px;
+  padding: 5px;
+  width: 40px;
+  height: 35px;
+  bottom: 23%;
+  transform: translate(-50%);
+  outline: 0;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.arrow-prev {
+  right: 29%;
+}
+
+.arrow-next {
+  right: 1.5%;
+}
+
+.arrow img {
+  width: 20px;
+}
+
+.quote {
+  font-size: 2.2rem;
+  line-height: 3rem;
+}
+
+.quote_one {
+  width: 13%;
+  position: absolute;
+  top: 15%;
+  left: 18%;
+}
+
+.quote_two {
+  width: 18%;
+  position: absolute;
+  top: 36%;
+  right: 9%;
+}
+
+.quote_three {
+  width: 40%;
+  position: absolute;
+  bottom: 11%;
+  left: 18%;
+}

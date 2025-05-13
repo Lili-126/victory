@@ -1,0 +1,66 @@
+.form-city {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.form__input {
+  padding: 7px;
+  background: transparent;
+  border: 1px solid var(--primary);
+  border-radius: 7px;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.form__input:focus {
+  border: 2px solid var(--primary);
+  outline: 0;
+  background-color: var(--bgBtn);
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.form__input::placeholder {
+  font-size: 1.6rem;
+  color: #00000098;
+}
+
+.form__btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  width: 60px;
+  height: 40px;
+  padding: 5px;
+  background-color: var(--bgBtn);
+  border: 1px solid var(--primary);
+  border-radius: 7px;
+}
+
+.weather-date {
+  position: relative;
+  width: 100%;
+  background: var(--primary);
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.weather__img {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 20%;
+  bottom: 30px;
+  right: 10px;
+}
+
+.title-city,
+.date,
+.temperature,
+.weather__icon {
+  margin-bottom: 10px;
+}
