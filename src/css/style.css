@@ -1,0 +1,407 @@
+@font-face {
+  font-family: 'Open sans';
+  src: url('./fonts/OpenSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open sans';
+  src: url('./fonts/OpenSans-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dela Gothic One';
+  src: url('./fonts/DelaGothicOne-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary: burlywood;
+  --secondary: #000000a1;
+  --bgBtn: antiquewhite;
+  --light: #ffffff;
+  --dark: #000000;
+  --blue: #000395b5;
+
+  --boxShadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+html {
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+body {
+  background-image: url('../images/background/fon1.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+.page {
+  height: 100vh;
+  padding: 35px;
+}
+
+.maim_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+/* player */
+.player {
+  width: 260px;
+  background: var(--primary);
+  padding: 15px;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.player__img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.player__img,
+.song-title {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.name {
+  font-size: 1.6rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 10px;
+  margin-bottom: 10px;
+}
+
+.track-time {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.track {
+  display: block;
+  height: 8px;
+  width: 100%;
+  background: var(--light);
+  opacity: 0.3;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.track_active {
+   position: absolute;
+   height: 8px;
+   display: block;
+   background: var(--secondary);
+   opacity: 0.8;
+   border-radius: 10px;
+   bottom: 21px;
+   cursor: pointer;
+}
+
+.times {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+.playlist__item {
+  font-size: 1.6rem;
+  text-align: start;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.playlist__item.active {
+  font-size: 1.8rem;
+  color: aliceblue;
+}
+
+
+
+
+/* time */
+.clock {
+  width: 600px;
+  height: 600px;
+  border: 3px solid var(--dark);
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/clock/часы15.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+.clock::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: var(--dark);
+  border-radius: 50%;
+  z-index: 20;
+}
+
+.hour,
+.minute,
+.second {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hours,
+.minutes,
+.seconds {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.hours::before,
+.minutes::before,
+.seconds::before {
+  position: absolute;
+  background-color: var(--dark);
+}
+
+.hours {
+  width: 200px;
+  height: 210px;
+}
+
+.hours::before {
+  content: '';
+  width: 11px;
+  height: 105px;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.minutes {
+  width: 300px;
+  height: 300px;
+
+}
+
+.minutes::before {
+  content: '';
+  width: 7px;
+  height: 160px;
+  z-index: 12;
+  border-radius: 3px;
+}
+
+.seconds {
+  width: 340px;
+  height: 340px;
+}
+
+.seconds::before {
+  content: '';
+  width: 4px;
+  height: 230px;
+  z-index: 14;
+  border-radius: 3px;
+}
+
+
+
+
+/* weather */
+.form-city {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.form__input {
+  padding: 7px;
+  background: transparent;
+  border: 1px solid var(--primary);
+  border-radius: 7px;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.form__input:focus {
+  border: 2px solid var(--primary);
+  outline: 0;
+  background-color: var(--bgBtn);
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.form__input::placeholder {
+  font-size: 1.6rem;
+  color: #00000098;
+}
+
+.form__btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  width: 60px;
+  height: 40px;
+  padding: 5px;
+  background-color: var(--bgBtn);
+  border: 1px solid var(--primary);
+  border-radius: 7px;
+}
+
+.weather-date {
+  position: relative;
+  width: 100%;
+  background: var(--primary);
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.weather__img {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 20%;
+  bottom: 30px;
+  right: 10px;
+}
+
+.title-city,
+.date,
+.temperature,
+.weather__icon {
+  margin-bottom: 10px;
+}
+
+
+
+
+/* footer */
+.slider-box {
+  background-position: center top;
+  background-size: cover;
+  position: absolute;
+  width: 25%;
+  height: 35%;
+  bottom: 70px;
+  right: 90px;
+  border-radius: 7px;
+  box-shadow:  var(--boxShadow);
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.slide {
+  display: none;
+}
+
+.arrow {
+  position: fixed;
+  background: transparent;
+  border: none;
+  border-radius: 15px;
+  padding: 5px;
+  width: 40px;
+  height: 35px;
+  bottom: 23%;
+  transform: translate(-50%);
+  outline: 0;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.arrow-prev {
+  right: 29%;
+}
+
+.arrow-next {
+  right: 1.5%;
+}
+
+.arrow img {
+  width: 20px;
+}
+
+.quote {
+  font-size: 2.2rem;
+  line-height: 3rem;
+}
+
+.quote_one {
+  width: 13%;
+  position: absolute;
+  top: 15%;
+  left: 18%;
+}
+
+.quote_two {
+  width: 18%;
+  position: absolute;
+  top: 36%;
+  right: 9%;
+}
+
+.quote_three {
+  width: 40%;
+  position: absolute;
+  bottom: 11%;
+  left: 18%;
+}
+
+
+
+
