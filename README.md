@@ -1,5 +1,15 @@
 # victory
 
+https://lili-126.github.io/victory/
+
+
+
+
+
+
+
+
+
 
 Аналоговые часы:
 https://www.youtube.com/watch?v=OiN6RFMhGHk
