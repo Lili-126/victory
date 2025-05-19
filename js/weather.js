@@ -40,12 +40,13 @@ async function getWeather(inputText) {
 }
 
 
-/* export */ function showDefaultCityWeather() {
+export function showDefaultCityWeather() {
   getWeather(titleCity.textContent);
 }
-showDefaultCityWeather();
+/* showDefaultCityWeather(); */
 
-/* export */ const getData = () => {
+
+export const getData = () => {
   const date = document.querySelector('.date');
   date.textContent = new Date().toLocaleString('ru',
     {
@@ -54,7 +55,7 @@ showDefaultCityWeather();
       year: 'numeric',
     });
 }
-getData();
+/* getData(); */
 
 
 

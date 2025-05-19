@@ -3,7 +3,7 @@ const minuteArrow = document.querySelector('.minutes');
 const secondArrow = document.querySelector('.seconds');
 let deg = 6; //шаг минутной и секундной стрелок
 
-/* export */ const getClock = () => {
+export const getClock = () => {
   const date = new Date();
   let hours = date.getHours() * 30;  // часы умнажаем на 30 градусов (шаг часа = 30 градусов)
   let minutes = date.getMinutes() * deg;
@@ -14,7 +14,7 @@ let deg = 6; //шаг минутной и секундной стрелок
   secondArrow.style.transform = `rotateZ(${seconds}deg)`;
 }
 
- setInterval( () => {
+/*  setInterval( () => {
   getClock();
 }, 0);
-
+ */

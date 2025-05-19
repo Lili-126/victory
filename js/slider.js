@@ -1,7 +1,7 @@
 const sliderBox = document.querySelector('.slider-box');
 const slides = document.querySelectorAll('.slide');
-/* export */ const prevSl = document.querySelector('#prev');
-/* export */ const nextSl = document.querySelector('#next');
+export const prevSl = document.querySelector('#prev');
+export const nextSl = document.querySelector('#next');
 
 
 let activeSlide = 0;
@@ -19,7 +19,7 @@ const showSlide = (activeSlide) => {
   sliderBox.style.backgroundImage =  slides[activeSlide].style.backgroundImage;
 }
 
-/* export */ const setNextSlide =  () => {
+export const setNextSlide =  () => {
   activeSlide += 1;
 
   if (activeSlide > slides.length -1) {
@@ -29,10 +29,10 @@ const showSlide = (activeSlide) => {
   setActiveSlider(activeSlide);
   showSlide(activeSlide);
 }
-nextSl.addEventListener('click', setNextSlide);
+/* nextSl.addEventListener('click', setNextSlide); */
 
 
-/* export */ const setPrevSlide = () => {
+export const setPrevSlide = () => {
  activeSlide -= 1;
   if (activeSlide < 0) {
     activeSlide = slides.length -1;
@@ -41,4 +41,4 @@ nextSl.addEventListener('click', setNextSlide);
   setActiveSlider(activeSlide);
   showSlide(activeSlide);
 }
-prevSl.addEventListener('click', setPrevSlide);
+/* prevSl.addEventListener('click', setPrevSlide); */

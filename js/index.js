@@ -1,10 +1,7 @@
-import { getClock } from "./js/clock";
-import { createPlayList } from "./js/player";
-import {nextSl, setNextSlide, prevSl, setPrevSlide } from "./js/slider";
-import { showDefaultCityWeather, getData } from "./js/weather";
-import "./index.html";
-import "./style.css";
-
+import { getClock } from "./clock.js";
+import { createPlayList } from "./player.js";
+import {nextSl, setNextSlide, prevSl, setPrevSlide } from "./slider.js";
+import { showDefaultCityWeather, getData } from "./weather.js";
 
 
 window.onload = function() {
