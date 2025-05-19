@@ -1,5 +1,5 @@
 # victory
-
+![Снимок экрана 2025-05-19 130619](https://github.com/user-attachments/assets/82faa2cb-0165-4a23-8e0e-9f848b3fe771)
 
 Аналоговые часы:
 https://www.youtube.com/watch?v=OiN6RFMhGHk
