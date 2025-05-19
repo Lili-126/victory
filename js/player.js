@@ -53,7 +53,7 @@ const songs = [
   },
 ]
 
-/* export */ function createPlayList() {
+export function createPlayList() {
 
   songs.forEach((song, index) => {
    const li = document.createElement('li');
@@ -70,7 +70,7 @@ const songs = [
    setPlayList(index, li, playlist);
   });
 }
-createPlayList();
+/* createPlayList(); */
 
 
 function setPlayList(index, li) {
